@@ -1,59 +1,91 @@
-🧾 Rendu TP Réalité Augmentée - Victor PIANA
+# 🧾 Augmented Reality Project Submission - Victor PIANA
 
-📦 CONTENU DU DOSSIER
+> This repository contains the submission files for the Augmented Reality (AR) practical work (TP). This set of Android APKs showcases various AR capabilities, including marker-based tracking, plane detection, object manipulation, and advanced face tracking with dynamic interactions.
 
-1. Partie 1 - QR Code
-   📄 Partie1 QR CODE Piana Victor.apk
-   ▶️ Affichage d’un objet 3D déclenché par un marqueur image (QR code)
+[![Engine](https://img.shields.io/badge/Engine-Unity-gray.svg)](https://unity.com/)
+[![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://www.android.com/)
+[![Framework](https://img.shields.io/badge/Framework-ARFoundation-lightgray.svg)](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/index.html)
+[![Author](https://img.shields.io/badge/Author-Victor_PIANA-blue.svg)](#)
 
-2. Partie 2 - Détection de plan, sélection et interactions
-   📄 Partie 2 TP (Plan) Piana Victor.apk
-   ▶️ Détection de surfaces planes
-   ▶️ Placement d’objet par toucher
-   ▶️ Sélection visuelle 
-   ▶️ Rotation, mise à l’échelle et déplacement sur les plans détectés
+---
 
-3. Partie 3 - Détection de visage
-   📄 Visage1 Piana Victor.apk
-      - Affichage d’un objet 3D sur le visage détecté
-   📄 Visage2 PianaVictor.apk
-      - Intégration d’une vidéo personnalisée sur le visage 
-   📄 Visage3 PianaVictor.apk
-      - Affichage d’un repère XYZ animé fixé à la tête
+## 📦 PROJECT CONTENT & FEATURES
 
-4. Pour aller plus loin - Application combinée
-   📄 PourAllerPlusLoin_Victor_Piana.apk
+### 1. Part 1 - QR Code (Image Marker Tracking)
 
-   ▶️ Phase d’instructions au lancement :
-      - Affichage de deux messages explicatifs :
-         - Tournez ou inclinez votre tête pour changer d’émoji (haut / milieu / bas)
-         - Restez immobile pour accélérer l'étoile • Bougez → elle ralentit • Inclinez votre tête → change la couleur
-      - Chaque message est affiché durant 2,5 secondes, puis s’estompe avec un effet de fondu alpha sur 2,5 secondes
-      - Une seule fois par session ; si le visage est perdu puis retrouvé, le système redémarre proprement
+* **APK File:** `Partie1 QR CODE Piana Victor.apk`
+* **Feature:** Displays a **3D object** triggered by an image marker (**QR code**).
 
-   ▶️ Émojis dynamiques sur le visage :
-      - Aucun émoji affiché au démarrage
-      - Un seul émoji affiché à la fois selon l’orientation verticale de la tête :
-         - Haut → emoji rouge
-         - Milieu → emoji neutre
-         - Bas → emoji jaune
-      - Les émojis restent cachés tant que la phase d’instructions n’est pas terminée
+### 2. Part 2 - Plane Detection, Selection, and Interactions
 
-   ▶️ Étoile flottante et dynamique :
-      - L’étoile apparaît au-dessus de la tête à la fin des instructions
-      - Elle tourne autour de la tête à vitesse constante
-      - Sa vitesse de rotation et sa grosseur augmente progressivement si l’utilisateur reste immobile
-      - En cas de mouvement, elle ralentit automatiquement
+* **APK File:** `Partie 2 TP (Plan) Piana Victor.apk`
+* **Core Functionalities:**
+    * ▶️ **Plane Detection:** Automatically identifies horizontal surfaces (floors, tables).
+    * ▶️ **Object Placement:** Allows placing a 3D object via screen tap.
+    * ▶️ **Visual Selection:** Enables selecting the placed object.
+    * ▶️ **Interaction:** Supports **rotation**, **scaling**, and **movement** of the object on the detected planes.
 
-   ▶️ Effets visuels adaptatifs :
-      - L’étoile change de couleur selon l’inclinaison verticale du visage :
-         - Tête haute :  rouge
-         - Tête basse :  jaune
-         - Tête normale :  vert
-      - Elle est accompagnée d’un halo lumineux dynamique
+### 3. Part 3 - Face Detection
 
-   ▶️ Robustesse du système :
-      - Si le visage est perdu et retrouvé, tout redémarre depuis les messages
-      - Le système est stable et autonome, sans bouton ni interface manuelle
+| APK File | Feature Description |
+| :--- | :--- |
+| **`Visage1 Piana Victor.apk`** | Displays a **3D object** anchored to the detected face. |
+| **`Visage2 PianaVictor.apk`** | Integrates a **custom video feed** superimposed on the face. |
+| **`Visage3 PianaVictor.apk`** | Displays an **animated XYZ reference frame** (gizmo) fixed to the head. |
 
-✅ Tous les fichiers APK sont prêts à être installés sur Android, et ont été testés individuellement.
+---
+
+## 4. Going Further - Combined Dynamic Application
+
+* **APK File:** `PourAllerPlusLoin_Victor_Piana.apk`
+* **Overview:** A stable, autonomous application combining face tracking with dynamic state changes based on head movement and user stillness.
+
+### ✨ Dynamic User Experience
+
+#### 1. Startup Instructions Phase
+
+* Two explanatory messages are displayed:
+    * *« Turn or tilt your head to change the emoji (up / middle / down) »*
+    * *« Stay still to accelerate the star • Move → it slows down • Tilt your head → changes the color »*
+* **Timing:** Each message is shown for **2.5 seconds**, then fades out with an **alpha blend effect over 2.5 seconds**.
+* **Robustness:** Occurs **once per session**; if the face is lost and rediscovered, the system cleanly restarts this phase.
+
+#### 2. Dynamic Emojis on Face
+
+* No emoji displayed at startup.
+* A single emoji is shown based on the **vertical orientation of the head**:
+    * **High Tilt** (Looking up) → Red emoji
+    * **Neutral Position** → Neutral emoji
+    * **Low Tilt** (Looking down) → Yellow emoji
+* Emojis remain **hidden** until the instruction phase is complete.
+
+#### 3. Floating and Dynamic Star
+
+* The star appears **above the head** upon instruction completion.
+* **Speed/Size:** Its rotation speed and size progressively **increase** if the user remains **still**.
+* **Movement Impact:** It automatically **slows down** when the user moves.
+
+#### 4. Adaptive Visual Effects
+
+* The star's **color changes** based on the vertical face tilt:
+    * High Head Tilt: **Red**
+    * Low Head Tilt: **Yellow**
+    * Normal Head Position: **Green**
+* The star is accompanied by a **dynamic luminous halo**.
+
+---
+
+## 🚀 How to Test (Android APKs)
+
+All provided APK files are ready to be installed on any Android device.
+
+1.  **Download** the desired `.apk` file(s).
+2.  On your Android device, enable **"Install from unknown sources"** in your security settings (if you haven't already).
+3.  Open the downloaded `.apk` file to install the application.
+4.  Launch the app and grant **camera permissions** to enable the Augmented Reality experience.
+
+---
+
+## ✅ Status
+
+All APK files have been individually tested and confirmed to be fully functional.
